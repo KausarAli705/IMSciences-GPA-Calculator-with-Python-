@@ -1,0 +1,47 @@
+class GpaCalculator():
+    totalPoints=0
+    totalhours=0
+    hrs=0
+    numberofclasses=int(input("how many subjects do you have in this semester: "))
+    count=0
+    for count in range(count, numberofclasses):
+        print()
+        print("================================================")
+        # //This is to keep track of the number of classes (Optional)
+        print("For class # ", count+1)
+
+        #  '''Prompt user for number of number of credit hours per class'''
+        hrs = int(input("Enter the credit hrs for subject : "))
+
+        # '''Prompt user to enter the letter grade'''
+        grade = int(input("Enter the marks for subject : "))
+    
+        print("================================================")
+
+        if grade >=87:
+            totalPoints = totalPoints + (hrs * 4)
+            totalhours = totalhours + hrs
+        elif grade >=80:
+            totalPoints += (hrs * 3.5)
+            totalhours += hrs
+        elif grade >=72:
+            totalPoints += (hrs * 3.0)
+            totalhours += hrs
+        elif grade >=66:
+            totalPoints += (hrs * 2.5)
+            totalhours += hrs
+        elif grade >=60:
+            totalPoints += (hrs * 2.0)
+            totalhours += hrs
+        else:
+            totalPoints += (hrs * 0.0)
+            totalhours += hrs    
+    gpa = totalPoints / totalhours
+    print("Your GPA is :", gpa)    
+    print("*********************************end*****************************************")
+
+
+def main():
+    gpa = GpaCalculator()
+
+if __name__ == '__main__':main()
